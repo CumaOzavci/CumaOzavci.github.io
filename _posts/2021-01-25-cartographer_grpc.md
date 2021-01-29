@@ -7,14 +7,14 @@ excerpt_separator: <!--more-->
 ---
 Cartographer has built in cloud capabilities but it is not well documented. In this post, i will give a basic server and client example.
 
-To use Cartographer Cloud you need `cartographer_grpc_node`. This node is not available with default compile settings. You can check by double tabbing after `rosrun cartographer_ros`.
+To use Cartographer, Cloud you need `cartographer_grpc_node`. This node is not available with default compile settings. You can check by double tabbing after `rosrun cartographer_ros`.
 
 
 ![Cartographer GRPC](/pictures/cartographer_grpc_1.png){:class="img-responsive"}
 
 <br />
 
-Before recompile you need to install GRPC dependencies. Assuming you already installed basic dependencies, you can use following scripts provided by cartographer:
+Before recompile, you need to install GRPC dependencies. Assuming you already installed basic dependencies, you can use following scripts provided by cartographer:
 
 ```
 ~/catkin_ws/src/cartographer/scripts/install_grpc.sh
@@ -23,7 +23,7 @@ Before recompile you need to install GRPC dependencies. Assuming you already ins
 <!--more-->
 <br />
 
-Now, go to your workspace and build `cartographer_ros` with `BUILD_GRPC` flag like this:
+Now go to your workspace and build `cartographer_ros` with `BUILD_GRPC` flag like this:
 
 ```
 catkin build cartographer_ros -DBUILD_GRPC=ON
@@ -142,7 +142,7 @@ Full list of cartographer_grpc_node parameters and their descriptions can be fou
 
 <br />
 
-If everything went correctly you can use Cartographer Cloud now. To start server and client, run respective `launch` files. After client registered to server, server output should look like this:
+If everything went correctly, you can use Cartographer Cloud now. To start server and client, run respective `launch` files. After client registered to server, server output should look like this:
 
 ![Cartographer GRPC](/pictures/cartographer_grpc_3.png){:class="img-responsive"}
 
@@ -152,5 +152,5 @@ If everything went correctly you can use Cartographer Cloud now. To start server
 1. Server address is the IP address of the computer which `cartographer_grpc_server.sh` is working on. If server and client is working on the same computer, you can leave it as `localhost`
 2. Unless `upload_load_state_file` param is set to true, `pbstream` file pointed with `load_frozen_state` is relative to the servers file system. This means pbstream file should be located at server side.
 3. Last `pbstream` file uploaded to server overrides current submaps. For example, if you are mapping with a client and later you start another client with localization mode, all submaps in the server will be replaced with the ones in new `pbstream` file.
-4. `cartographer_grpc_server.sh` does not publish submaps therefore if clients are on different computer you should use something else (ROS Network, etc.) to see the map. 
+4. `cartographer_grpc_server.sh` does not publish submaps therefore if clients are on different computers you should use something else (ROS Network, etc.) to see the map. 
 5. `client_id` is a string and should be unique for every client.
