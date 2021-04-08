@@ -14,6 +14,7 @@ We need an interface that will let customers communicate to robots and this inte
 - **Flexible**. Same interface should be able to be used for different customers and needs.
 - **Scalable**. Interface should be (almost) independent of fleet size.
 
+<br/>
 **REST API** is a good choice for this. It is matured and highly used in web industry. REST API calls can be made with almost all programming language and systems. Therefore can be integrated with any customer system. It is lightweight and fast. It can store security credentials. New capabilities can be added quickly and if needed, servers can be scaled up easily.
 
 <br/>
