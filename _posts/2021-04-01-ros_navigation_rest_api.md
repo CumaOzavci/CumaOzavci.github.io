@@ -13,7 +13,7 @@ We need an interface that will let customers communicate to robots and this inte
 - **Secure**. Only authorized users should be able to give commands to robots.
 - **Flexible**. Same interface should be able to be used for different customers and needs.
 - **Scalable**. Interface should be (almost) independent of fleet size.
-
+<!--more-->
 <br/>
 **REST API** is a good choice for this. It is matured and highly used in web industry. REST API calls can be made with almost all programming language and systems. Therefore can be integrated with any customer system. It is lightweight and fast. It can store security credentials. New capabilities can be added quickly and if needed, servers can be scaled up easily.
 
@@ -29,7 +29,7 @@ In this post, i will introduce a ROS package that will provide a **basic** REST 
 
 
 With this API, you can control mobile robot(s) with a mobile app or a web site and don't even have to know anything about ROS. For example, if you want to know where your robot is, you don't need to connect robot's ROS network and get that information manually. You will just send a GET request to a server and server will return robot's current location. All you need to do is just run corresponding launch files.
-<!--more-->
+
 <br/>
 ## [nav_rest_api](https://github.com/CumaOzavci/nav_rest_api)
 
