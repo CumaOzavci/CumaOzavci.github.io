@@ -8,7 +8,7 @@
 # For technical reasons, this file is *NOT* reloaded automatically when you use
 # 'bundle exec jekyll serve'. If you change this file, please restart the server process.
 #
-# If you need help with YAML syntax, here are some quick references for you: 
+# If you need help with YAML syntax, here are some quick references for you:
 # https://learn-the-web.algonquindesign.ca/topics/markdown-yaml-cheat-sheet/#yaml
 # https://learnxinyminutes.com/docs/yaml/
 #
@@ -28,11 +28,9 @@ linkedin_username:  CumaOzavci
 future: true
 
 # Build settings
-#Removed minima theme as it is now a regular theme
-# theme: minima
+theme: minima
 plugins:
   - jekyll-feed
-  - jekyll-sitemap
 
 # Exclude from processing.
 # The following items will not be processed, by default.
@@ -53,7 +51,3 @@ plugins:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
-
----
-excerpt_separator: <!--more-->
----
