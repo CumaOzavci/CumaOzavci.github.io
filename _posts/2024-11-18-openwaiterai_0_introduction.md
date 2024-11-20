@@ -14,6 +14,8 @@ LLMs have the potential to transform existing technologies in restaurants. Curre
 <blockquote class="reddit-embed-bq" style="height:500px" data-embed-height="740"><a href="https://www.reddit.com/r/shittyrobots/comments/18ike34/honestly_might_be_an_upgrade_nah/">Honestly, might be an upgrade? Nah!</a><br> by<a href="https://www.reddit.com/user/Myco_Cube/">u/Myco_Cube</a> in<a href="https://www.reddit.com/r/shittyrobots/">shittyrobots</a></blockquote><script async="" src="https://embed.reddit.com/widgets.js" charset="UTF-8"></script>
 <br/>
 
+<!--more-->
+
 In their current state, service robots in restaurants are efficient but limited in capability. They can only transport food and dishes. As seen in the video, these robots cannot respond to simple customer requests, such as bringing a glass of water. While useful for basic tasks, they lack the adaptability and interactivity needed to provide a truly exceptional dining experience.
 
 By integrating LLM technology, these robots could transcend their physical limitations. Although they still wouldn’t have arms, they could use advanced conversational AI to coordinate with human staff, ensuring tables are promptly cleaned and requests are addressed. **These robots could actively take orders directly from customers, recommending dishes based on their preferences or dietary restrictions, and even suggesting dessert options. Instead of merely delivering food, they could confirm orders, handle modifications, and seamlessly relay the information to <u>the kitchen</u>. With LLMs, service robots would not only engage with customers but also personalize the entire ordering process, creating a dining experience that feels both intuitive and futuristic.**
