@@ -31,7 +31,7 @@ I am more fan of collecting data on the way. We will start with prompt engineeri
 
 ![Anthropic Comparision](/pictures/anthropic_comparision.png){:class="img-responsive"}
 *Instruction Following Win Rates*
-(Source [Claude 3.5 Sonnet (New) Model Card](https://x.com/karpathy/status/1655994367033884672))
+(Source [Claude 3.5 Sonnet (New) Model Card](https://assets.anthropic.com/m/1cd9d098ac3e6467/original/Claude-3-Model-Card-October-Addendum.pdf))
 
 Selecting an llm is crucial for prompt engineering. You can not use same prompt with every llm. Different llms from different companies have different styles and capabilities. Therefore deciding on an llm at the beginning will make the development process much easier. As you can see above, even llms from same company can have very different instruction following capabilities. And as you can see below, even if we choose the best llm, its performance may degrade in long scenarios. Knowing limits of your llm is very important because this can change your process workflow, code and infrastructure.
 
@@ -39,6 +39,6 @@ I will use OpenAI's latest best llm (currently ChatGPT 4o) in this project. But 
 
 ![Anthropic Tau Score](/pictures/sonnet_new_tau.png){:class="img-responsive"}
 *pass^k for TAU-retail*
-(Source [Claude 3.5 Sonnet (New) Model Card](https://x.com/karpathy/status/1655994367033884672))
+(Source [Claude 3.5 Sonnet (New) Model Card](https://assets.anthropic.com/m/1cd9d098ac3e6467/original/Claude-3-Model-Card-October-Addendum.pdf))
 
 Understanding limitations of llm's instruction following capabilities is very important. Because this means, even if you use the best and the most expensive llm, write the best code and create the best infrastructure, sometimes you will get wrong answers. Even a well fine tuned llm will not give correct answers all the time. Explaining this to non-technical people might be problematic. With all technical papers, benchmarks and expert reports, some *morons* will not be able to understand this simple limitation!
