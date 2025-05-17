@@ -38,7 +38,7 @@ This tool helps customer visualize his/her order. Imagine, the device running `O
 ### System Instructions
 To be honest, i was afraid of this section. Because, making an LLM behave like an elite waiter while maintaining all the tool logic is hard, really hard. This was maybe the hardest task in my previous projects. But now I have an advantage that I didn't have before: `Google's AI Studio with Gemini 2.5 Pro`. With its massive context window and multimodal capabilites, `Gemini 2.5 Pro` can process very diverse set of data with very high intellect. It can even process Youtube videos. And the best part is, it's all free!
 
-Firstly, i found a [good Youtube video](https://www.youtube.com/watch?v=S1CfItpKg7c). It was a training module for a restaurant service system called `ABCDXO`. I didn't even know this system existed! I just put most watched video on Youtube into `AI Studio`. Then i asked `Gemini 2.5 Pro` to extract breakdown of the key informations in that video. Here is the summary of `ABCDXO` system:
+Firstly, i found a [good Youtube video](https://www.youtube.com/watch?v=S1CfItpKg7c). It was a training module for a restaurant service system called `ABCDXO`. I didn't even know this system existed! I just put most watched video on Youtube into `AI Studio`. Then i asked `Gemini 2.5 Pro` to extract breakdown of the key informations in that video. Here is the <ins>summary</ins> of `ABCDXO` system:
 
 ```
 The ABCDXO System is a comprehensive restaurant service philosophy
@@ -58,6 +58,8 @@ job satisfaction by ensuring every guest interaction
 is positive and exceeds expectations.
 ```
 
-Then i put key informations of `ABCDXO` system and `OpenWaiterAI` code into `AI Studio` and asked `Gemini 2.5 Pro` to create system message for me. After a few feedbacks, `Gemini 2.5 Pro` gave me perfect system message!
+Then i put key informations of `ABCDXO` system and `OpenWaiterAI` code into `AI Studio` and asked `Gemini 2.5 Pro` to create system message for me. After a few feedbacks, `Gemini 2.5 Pro` gave me the perfect system message!
 
-If you want to change `OpenWaiterAI`s behaviour, you can follow similar path: put current system message into `AI Studio` and ask `Gemini 2.5 Pro` to make the changes you want. You can even start from stracth. For example, if you have a book or another video, or both; just put them into `AI Studio` and use `Gemini 2.5 Pro` to create your own system message.
+If you want to change `OpenWaiterAI`'s behaviour, you can follow similar path: put current system message into `AI Studio` and ask `Gemini 2.5 Pro` to make the changes you want. You can even start from stracth. For example, if you have a book or another video, or both; just put them into `AI Studio` and use `Gemini 2.5 Pro` to create your own system message.
+
+With these tools and system message `OpenWaiterAI` is now capable of serving customers. You can find repo in this [link](https://github.com/CumaOzavci/openwaiterai). In the next post, we will connect multiple `OpenWaiterAI` instances to database and create a simple manager for them.
