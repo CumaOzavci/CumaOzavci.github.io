@@ -7,7 +7,7 @@ excerpt_separator: <!--more-->
 ---
 In this post, we will finish basic tool setup and system instructions of `OpenWaiterAI`.
 
-### Tools
+### [Tools](https://github.com/CumaOzavci/openwaiterai/tree/main/openwaiterai/Tools)
 With below tools `OpenWaiterAI` will be able to:
 1. Know its restaurant and menu
 2. Query menu
@@ -17,7 +17,7 @@ With below tools `OpenWaiterAI` will be able to:
 
 <br />
 
-#### 1. SQLQueryTool
+#### 1. [SQLQueryTool](https://github.com/CumaOzavci/openwaiterai/blob/main/openwaiterai/Tools/SQLQueryTool.py)
 This tool and its logic was described in [previous post](https://cumaozavci.github.io/ai/openwaiterai/rag/2025/02/17/openwaiterai_2_rag.html). You can check it for more details. While i did not change this tool, i added two new tables to database: `WaiterCalls` and `CustomerManagementQueries`. `WaiterCalls` table is for calling waiters to the table. LLM can pass a call reason too. `CustomerManagementQueries` table is for asking questions for restaurant management. Due to its logic, i created another tool for this.
 <br />
 
@@ -25,17 +25,17 @@ This tool and its logic was described in [previous post](https://cumaozavci.gith
 <br />
 <!--more-->
 
-#### 2. CustomerQueryTool
+#### 2. [CustomerQueryTool](https://github.com/CumaOzavci/openwaiterai/blob/main/openwaiterai/Tools/CustomerQueryTool.py)
 This tool submits a question into below table and waits for an answer. It checks answer every second for 30 seconds. If there are no answer in this time, it raises error. With this tool LLM will be able to redirect customer queries and ask questions itself. This will be usefull especially when restaurant database is not filled correctly.
 <br />
 
 ![Customer Queries SQL Schema](/pictures/customer_queries_sql_schema.png.png){:class="img-responsive" width="50%"}
 <br />
 
-#### 3. SetOrderSlipTool
+#### 3. [SetOrderSlipTool](https://github.com/CumaOzavci/openwaiterai/blob/main/openwaiterai/Tools/SetOrderSlipTool.py)
 This tool helps customer visualize his/her order. Imagine, the device running `OpenWaiterAI` has a screen; LLM will update customers order slip when customer makes a change and when customer approves slip, it will be submitted into database.
 
-### System Instructions
+### [System Instructions](https://github.com/CumaOzavci/openwaiterai/blob/main/system_instructions.txt)
 To be honest, i was afraid of this section. Because, making an LLM behave like an elite waiter while maintaining all the tool logic is hard, really hard. This was maybe the hardest task in my previous projects. But now I have an advantage that I didn't have before: `Google's AI Studio with Gemini 2.5 Pro`. With its massive context window and multimodal capabilites, `Gemini 2.5 Pro` can process very diverse set of data with very high intellect. It can even process Youtube videos. And the best part is, it's all free!
 
 Firstly, i found a [good Youtube video](https://www.youtube.com/watch?v=S1CfItpKg7c). It was a training module for a restaurant service system called `ABCDXO`. I didn't even know this system existed! I just put most watched video on Youtube into `AI Studio`. Then i asked `Gemini 2.5 Pro` to extract breakdown of the key informations in that video. Here is the <ins>summary</ins> of `ABCDXO` system:
