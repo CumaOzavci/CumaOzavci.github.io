@@ -34,3 +34,30 @@ This tool submits a question into below table and waits for an answer. It checks
 
 #### 3. SetOrderSlipTool
 This tool helps customer visualize his/her order. Imagine, the device running `OpenWaiterAI` has a screen; LLM will update customers order slip when customer makes a change and when customer approves slip, it will be submitted into database.
+
+### System Instructions
+To be honest, i was afraid of this section. Because, making an LLM behave like an elite waiter while maintaining all the tool logic is hard, really hard. This was maybe the hardest task in my previous projects. But now I have an advantage that I didn't have before: `Google's AI Studio with Gemini 2.5 Pro`. With its massive context window and multimodal capabilites, `Gemini 2.5 Pro` can process very diverse set of data with very high intellect. It can even process Youtube videos. And the best part is, it's all free!
+
+Firstly, i found a [good Youtube video](https://www.youtube.com/watch?v=S1CfItpKg7c). It was a training module for a restaurant service system called `ABCDXO`. I didn't even know this system existed! I just put most watched video on Youtube into `AI Studio`. Then i asked `Gemini 2.5 Pro` to extract breakdown of the key informations in that video. Here is the summary of `ABCDXO` system:
+
+```
+The ABCDXO System is a comprehensive restaurant service philosophy
+designed to elevate servers from mere order-takers to proactive
+"salespeople" by encouraging them to go
+"Above and Beyond the Call of Duty" (ABCD) and add "Hugs and Kisses" (XO)
+– those extra thoughtful touches. It utilizes a customized
+XO Order Pad and descriptive inserts to guide servers through
+a structured yet personalized service journey. This journey
+emphasizes warmly greeting guests, building rapport, confidently
+suggesting appealing non-alcoholic beverages, appetizers, entrees,
+and desserts, and providing attentive ongoing care like quality checks
+and "Clearing, Crumbing, & Replenishing" (CCR). The system's goal is
+to create a "Total Guest Experience" that not only delights customers
+and fosters loyalty but also increases sales, server tips, and overall
+job satisfaction by ensuring every guest interaction
+is positive and exceeds expectations.
+```
+
+Then i put key informations of `ABCDXO` system and `OpenWaiterAI` code into `AI Studio` and asked `Gemini 2.5 Pro` to create system message for me. After a few feedbacks, `Gemini 2.5 Pro` gave me perfect system message!
+
+If you want to change `OpenWaiterAI`s behaviour, you can follow similar path: put current system message into `AI Studio` and ask `Gemini 2.5 Pro` to make the changes you want. You can even start from stracth. For example, if you have a book or another video, or both; just put them into `AI Studio` and use `Gemini 2.5 Pro` to create your own system message.
