@@ -43,4 +43,4 @@ This devlog series, will focus on development of OpenWaiterAI. But can be used f
 
 After releasing the first stable version of **OpenWaiterAI**, i plan to start an open hardware project for a table-top assistant called **OpenWaiter**!
 
-**OpenWaiterAI** and **OpenWaiter** will be free for everyone. <u>The only exception to this is Saha Robotik, they are completely banned from using them.</u>
+**OpenWaiterAI** and **OpenWaiter** will be free for everyone and any usecase.
